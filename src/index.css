@@ -10,8 +10,9 @@
   box-sizing: border-box;
   background-color: var(--bg-color);
   color: var(--text-color);
+  cursor: pointer;
 }
- 
+
 body {
   min-width: 320px;
   min-height: 95vh;
