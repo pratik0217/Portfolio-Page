@@ -1,0 +1,61 @@
+/* Navbar Style  */
+.navbar {
+    width: 100vw;
+    height: 95vh;
+}
+
+.nav-menu {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+nav {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    width: 500px;
+    border-radius: 30px;
+    background-color: #211F23;
+}
+
+.active {
+    color: #b292ff;
+}
+
+.link {
+    text-decoration: none;
+    background-color: #211F23;
+    padding: 8px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+#github {
+    color: black;
+    background-color: #ffffff;
+}
+
+#github:hover {
+    color: #ffffff;
+    background-color: #000000;
+}
+
+#linkedin {
+    color: #0077B5;
+    background-color: #ffffff;
+}
+
+#linkedin:hover {
+    background-color: #0077B5;
+    color: #ffffff;
+}
+
+.errorPage {
+    background-image: url(./assets/404Page.png);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
