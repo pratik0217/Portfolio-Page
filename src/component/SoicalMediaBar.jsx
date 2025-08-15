@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router'
 
 
 export default function SoicalMediaBar() {
@@ -10,8 +11,8 @@ export default function SoicalMediaBar() {
         </div>
         <div className="socialMedia-icon">
           <ul>
-            <li>GitHub</li>
-            <li>LinkedIn</li>
+            <li><Link className='social-link' to='https://github.com/pratik0217'>GitHub</Link></li>
+            <li><Link className='social-link' to='https://www.linkedin.com/in/pratik-nandkumar-jadhav/'>LinkedIn</Link></li>
           </ul>
         </div>
       </div>

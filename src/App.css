@@ -30,6 +30,7 @@ nav {
 
 .active {
   color: var(--text-purplecolor);
+  text-transform: uppercase;
 }
 
 .link {
@@ -75,6 +76,8 @@ nav {
   margin: 85px;
   border-radius: 80px;
   outline: 5px dashed var(--bgcolor);
+  background-image: url(./Background\ Image.png);
+  background-size: cover;
 }
 
 .heading-box {
@@ -82,8 +85,8 @@ nav {
   margin: 10px 0;
 }
 
-h1 {
-  background: linear-gradient(to right, #a592d2 0%, #330867 100%);
+.colorMix-heading {
+  background: linear-gradient(to right, #ea8e8e 0%, #f6dd3b 100%);
   background-clip: text;
   color: transparent;
 }
@@ -137,4 +140,20 @@ h1 {
     margin: 0 10px;
     margin-right: 15px;
     font-weight: 600;
+}
+
+.social-link {
+  background-color: var(--text-bgcolor);
+  text-decoration: none;
+}
+
+/* Education Page  */
+.educationList {
+  border: 10px dashed var(--text-bgcolor);
+  text-align: center;
+  border-radius: 50px;
+}
+
+.education-item {
+  margin-top: 15px;
 }

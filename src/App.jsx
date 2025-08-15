@@ -7,6 +7,7 @@ import Education from './component/Education'
 import Skills from './component/Skills'
 import Projects from './component/Projects'
 import ErrorPage from './component/ErrorPage'
+import SoicalMediaBar from './component/SoicalMediaBar'
 
 export default function App() {
   return (
@@ -23,6 +24,11 @@ export default function App() {
           </Route>
 
           <Route path='/*' element={<ErrorPage />} />
+        </Routes>
+
+        <Routes element={<SoicalMediaBar />}>
+          <Route path='https://github.com/pratik0217' />
+          <Route path='https://www.linkedin.com/in/pratik-nandkumar-jadhav/' />
         </Routes>
       </header>
     </>
