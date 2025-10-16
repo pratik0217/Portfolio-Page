@@ -31,6 +31,10 @@ export default function App() {
           <Route path='https://www.linkedin.com/in/pratik-nandkumar-jadhav/' />
         </Routes>
       </header>
+
+      <footer>
+        <SoicalMediaBar />
+      </footer>
     </>
   )
 }

@@ -7,11 +7,6 @@
 }
 
 /* Navbar Style  */
-.navbar {
-  width: 100vw;
-  height: 95vh;
-}
-
 .nav-menu {
   margin-top: 30px;
   display: flex;
@@ -70,41 +65,71 @@ nav {
 }
 
 /* Home Page  */
+
+.homePage-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 24px;
+  padding: 64px 16px;
+  min-height: calc(100vh - 160px);
+  position: relative;
+  isolation: isolate;
+}
+
 .intro-container {
-  width: 900px;
-  padding: 25px 100px 25px 65px;
-  margin: 85px;
-  border-radius: 80px;
-  outline: 5px dashed var(--bgcolor);
-  background-image: url(./Background\ Image.png);
-  background-size: cover;
+  width: min(92%, 960px);
+  padding: 32px 40px;
+  border-radius: 24px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+  backdrop-filter: blur(6px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+  border: 1px solid rgba(255,255,255,0.08);
+  animation: fadeInUp 700ms ease-out both;
 }
 
 .heading-box {
-  font-size: 30px;
+  font-size: 20px;
   margin: 10px 0;
+  animation: fadeInUp 800ms ease-out both;
+  animation-delay: 80ms;
+}
+
+.heading {
+  font-size: clamp(28px, 5vw, 56px);
+  line-height: 1.1;
+  letter-spacing: 0.3px;
 }
 
 .colorMix-heading {
-  background: linear-gradient(to right, #ea8e8e 0%, #f6dd3b 100%);
+  background: linear-gradient(90deg, #ea8e8e, #f6dd3b, #b292ff);
+  background-size: 200% 100%;
   background-clip: text;
+  -webkit-background-clip: text;
   color: transparent;
+  font-size: clamp(34px, 7vw, 72px);
+  line-height: 1.05;
+  animation: gradientShift 6s ease-in-out infinite;
 }
 
 .info-box {
-  margin-top: 30px;
+  margin-top: 28px;
+  animation: fadeInUp 900ms ease-out both;
+  animation-delay: 120ms;
 }
 
 .info-box p {
-  font-size: 18px;
   margin: 10px 0;
+  line-height: 1.7;
+  opacity: 0.95;
 }
 
 /* Social Media  */
-.social-media {
+/* .social-media {
   display: flex;
   justify-content: center;
-}
+} */
 
 .socialMedia-link {
   background-color: var(--bgcolor);
@@ -156,4 +181,105 @@ nav {
 
 .education-item {
   margin-top: 15px;
+}
+
+footer {
+ display: flex;
+ justify-content: center; 
+}
+
+/* Home background glow */
+.homePage-container::before {
+  content: "";
+  position: absolute;
+  inset: -10% -20% auto -20%;
+  height: 60%;
+  background: radial-gradient(60% 60% at 50% 0%, rgba(178,146,255,0.25), rgba(0,0,0,0) 70%);
+  z-index: -1;
+  filter: blur(10px);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(12px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .homePage-container { padding: 56px 14px; }
+  .intro-container { padding: 24px; border-radius: 18px; }
+}
+
+@media (max-width: 480px) {
+  .homePage-container { padding: 48px 12px; }
+  .intro-container { padding: 20px; }
+}
+
+/* Navbar Animations */
+@keyframes navSlideDown {
+  0% { opacity: 0; transform: translateY(-12px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes linkPop {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-1px); }
+  100% { transform: translateY(0); }
+}
+
+/* Sticky navbar container */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.nav-menu {
+  animation: navSlideDown 600ms ease-out both;
+}
+
+nav {
+  backdrop-filter: blur(6px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+nav:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.28);
+}
+
+.link {
+  position: relative;
+  transition: color 0.25s ease, background-color 0.25s ease, transform 0.2s ease;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 4px;
+  height: 2px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+  opacity: 0.7;
+}
+
+.link:hover {
+  transform: translateY(-1px);
+}
+
+.link:hover::after,
+.active::after {
+  transform: scaleX(1);
 }
