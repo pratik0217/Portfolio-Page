@@ -1,0 +1,52 @@
+:root {
+    --text-primary-color : #000000;
+    --bg-primary-color : rgb(230, 218, 206);
+    --bg-secondary-color : rgb(255, 255, 255);
+    --text-hover-color : #0050FF;
+    --padding-inline-section : 20px;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    max-width: 1280px;
+    margin: auto;
+    padding-inline : var(--padding-inline-section);
+}
+
+p {
+    font-size: 17px;
+    word-spacing: 0.7px;
+    line-height: 1.8rem;
+}
+
+/* Navbar Section */
+.navbar-container {
+    height: 15vh;
+    background-color: var(--bg-primary-color); 
+    justify-content: space-between;  
+    padding-inline: 504px;
+}
+
+.portfolio-name {
+    gap: 10px;
+}
+
+.porfolio-icon {
+    width: 18px;
+    height: 18px;
+    background-color: var(--text-hover-color);
+}
+
+.portfolio-name p {
+    text-transform: uppercase;    
+}
+
+ul {
+    list-style: none;
+    gap: 30px;
+    text-transform: uppercase;
+}
