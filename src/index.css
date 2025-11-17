@@ -3,9 +3,15 @@
     max-width: 1140px;
     margin: 0 auto;
 }
-/* 
-body {
-    background-color: black;
+
+.container-md {
+    width: 100%;
+    /* max-width: 1140px; */
+    margin: 0 auto;
+}
+
+/* body {
+    background-color: rgb(111, 102, 194);
     color: white;
 } */
 

@@ -46,7 +46,6 @@ export default function App() {
             <Route path="/contact" element={<Contact />} />
           </Route>
         </Routes>
-
       </header>
 
       <main>
@@ -59,27 +58,29 @@ export default function App() {
 
         <section className='flex flex-col gap-15'>
           <Skills />
-          <section id='logos' className='container flex justify-center gap-10'>
-            <TechnicalSkill logo={htmlLogo} />
-            <TechnicalSkill logo={cssLogo} />
-            <TechnicalSkill logo={bootstrapLogo} />
-            <TechnicalSkill logo={tailwindLogo} />
-            <TechnicalSkill logo={jsLogo} />
-            <TechnicalSkill logo={reactLogo} />
-          </section>
+          <section className='flex-col gap-15'>
+            <section id='logos' className='container flex justify-center gap-20'>
+              <TechnicalSkill logo={htmlLogo} />
+              <TechnicalSkill logo={cssLogo} />
+              <TechnicalSkill logo={bootstrapLogo} />
+              <TechnicalSkill logo={tailwindLogo} />
+              <TechnicalSkill logo={jsLogo} />
+              <TechnicalSkill logo={reactLogo} />
+            </section>
 
-          <section id='logos' className='container justify-center flex gap-10'>
-            <TechnicalSkill logo={mySql} />
-            <TechnicalSkill logo={git} />
-            <TechnicalSkill logo={gitLogo} />
-            <TechnicalSkill logo={vercel} />
-            <TechnicalSkill logo={vsCode} />
-            <TechnicalSkill logo={windsurf} />
+            <section id='logos' className='container justify-center flex gap-20'>
+              <TechnicalSkill logo={mySql} />
+              <TechnicalSkill logo={git} />
+              <TechnicalSkill logo={gitLogo} />
+              <TechnicalSkill logo={vercel} />
+              <TechnicalSkill logo={vsCode} />
+              <TechnicalSkill logo={windsurf} />
+            </section>
           </section>
         </section>
 
         <section>
-          <Projects HomePageUsabilityHub={HomePageUsabilityHub} HomePageToDesktop={HomePageToDesktop} HomePageAltus={HomePageAltus}/>
+          <Projects HomePageUsabilityHub={HomePageUsabilityHub} HomePageToDesktop={HomePageToDesktop} HomePageAltus={HomePageAltus} />
         </section>
 
         <section>
